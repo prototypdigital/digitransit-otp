@@ -6,7 +6,7 @@ RUN apk add --update curl bash ttf-dejavu && \
 VOLUME /opt/opentripplanner/graphs
 
 ENV OTP_ROOT="/opt/opentripplanner"
-ENV ROUTER_DATA_CONTAINER_URL="https://api.cityrouting.prototyp.digital/routing-data/v2/croatia"
+ENV ROUTER_DATA_CONTAINER_URL="./graphs"
 
 WORKDIR ${OTP_ROOT}
 
