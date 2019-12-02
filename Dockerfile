@@ -6,7 +6,7 @@ RUN apk add --update curl bash ttf-dejavu && \
 VOLUME /opt/opentripplanner/graphs
 
 ENV OTP_ROOT="/opt/opentripplanner"
-ENV ROUTER_DATA_CONTAINER_URL="/opt/opentripplanner/graphs"
+ENV ROUTER_DATA_CONTAINER_URL="https://digitransit.sfo2.digitaloceanspaces.com"
 
 WORKDIR ${OTP_ROOT}
 
@@ -18,6 +18,6 @@ EXPOSE ${PORT}
 ENV SECURE_PORT=8081
 EXPOSE ${SECURE_PORT}
 ENV ROUTER_NAME=croatia
-ENV JAVA_OPTS="-Xms8G -Xmx8G"
+ENV JAVA_OPTS="-Xms2G -Xmx2G"
 
 ENTRYPOINT exec ./run.sh
